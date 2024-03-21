@@ -7,7 +7,7 @@ function About () {
     return (
         <div className="flex">
             <SideNavBar />
-            <div className="about text-black ml-64 w-7/12">
+            <div className="about text-black ml-64">
                 <h1 className="text-5xl font-mono font-bold mb-8">About</h1>
                 <p className="text-lg font-mono leading-relaxed">Tasklist is a web application that helps you to focus on your goals. The main point of application is to help you reach your goals by
                 forcing you to add tasks that will help you reach your goals.
