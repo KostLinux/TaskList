@@ -58,7 +58,7 @@ function Login() {
                         </div>
                     </div>
                     <div>
-                        <button type="submit" className="mt-4 group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-800 hover:bg-indigo-950 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 transition duration-150 ease-in-out hover:scale-105">
+                        <button type="submit" className="mt-4 group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 transition duration-150 ease-in-out hover:scale-105">
                             <div className="flex items-center">
                                 <FontAwesomeIcon icon={faSignInAlt} className="mr-2" />
                                 <span>Sign in</span>
