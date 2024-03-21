@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import SideNavBar from '../../Components/SideNavBar/Sidebar';
+import './App.css';
 
 const Dashboard: FC = () => {
     return (

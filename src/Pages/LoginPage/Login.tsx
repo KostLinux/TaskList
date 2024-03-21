@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faLock } from '@fortawesome/free-solid-svg-icons'
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
+import '../../App.css'
 import credentials from '../../credentials.json';
 import logo from '/logo.png';
-import '../../App.css'
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -30,6 +30,17 @@ function Login() {
             alert('Invalid Credentials');
         }
     };
+    useEffect(() => {
+        // Add the background image to the body when the component is mounted
+        document.body.style.backgroundImage = 'url("/tasklist.jpg")';
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundRepeat = 'no-repeat';
+
+        // Remove the background image from the body when the component is unmounted
+        return () => {
+            document.body.style.backgroundImage = '';
+        };
+    }, []);
 
     useEffect(() => {
         if (loginStatus) {
@@ -38,7 +49,7 @@ function Login() {
     }, [loginStatus, navigate]);
 
     return (
-        <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-slate-600 bg-opacity-50">
+        <div className="loginpage flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-slate-600 bg-opacity-50">
             <div className="max-w-md w-full space-y-8">
                 <div>
                     <h2 className="mt-6 text-center text-3xl font-extrabold text-white">

@@ -2,16 +2,17 @@ import React, { FC } from 'react';
 import { NavLink, useMatch } from 'react-router-dom';
 import logo from '/logo.png';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { faTachometerAlt, faRocket, faListUl, faInfoCircle  } from '@fortawesome/free-solid-svg-icons';
+import { faPieChart, faRocket, faListUl, faInfoCircle  } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const SideNavBar: FC = () => {
     return (
-        <div className="sidenav fixed top-0 left-0 h-full bg-slate-800">
+        <div className="sidenav fixed top-0 left-0 h-full w-64 bg-slate-900 overflow-auto">
             <img src={logo} alt="TaskList Logo" className="block mx-auto w-24 h-20 mt-8 mb-8" />
-            <NavLinkObject to="/dashboard" icon={faTachometerAlt}>Dashboard</NavLinkObject>
+            <NavLinkObject to="/dashboard" icon={faPieChart}>Overview</NavLinkObject>
             <NavLinkObject to="/goals" icon={faRocket}>Goals</NavLinkObject>
             <NavLinkObject to="/tasks" icon={faListUl}>Tasks</NavLinkObject>
-            <NavLinkObject to="/tasks" icon={faInfoCircle}>About</NavLinkObject>
+            <NavLinkObject to="/about" icon={faInfoCircle}>About</NavLinkObject>
         </div>
     );
 }
